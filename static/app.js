@@ -2,7 +2,7 @@
 // Springboard May 26 Cohort
 class Game {
     constructor() {
-        this.time = 25;
+        this.time = 60;
         this.score = 0;
         this.words = new Set();
         this.playing = true;
