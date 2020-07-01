@@ -1,0 +1,118 @@
+/* Jon Compton */
+/* Springboard May 26 Cohort */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: orange;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body, html {
+    height: 100%;
+}
+
+#game-container {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: black;
+    height: 100%;
+}
+
+#stats-table {
+    width: 100%;
+    text-align: center;
+}
+
+#stats-table th {
+    color: red;
+}
+
+#stats-table td {
+    width: 33%;
+    
+}
+
+#game-board td {
+    color: black;
+    background-color: white;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+}
+
+#timer {
+    margin-top: 18px;
+    text-align: center;
+    text-shadow: 2px 2px orange;
+}
+
+#message-box {
+    margin-top: 18px;
+    width: 100%;
+    height: 25px;
+}
+
+#message {
+    text-align: center;
+    line-height: 25px;
+}
+
+#playfield {
+    padding-top: 18px;
+    display: flex;
+    height: 350px;
+    width: 900px;
+    margin: 0 auto;
+}
+
+#board-side {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#word-side {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#found-container {
+    position: relative;
+    height: 350px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid white;
+    padding: 8px;
+}
+
+#found-title {
+    color: blue;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+}
+
+.not-on-board, .exists, .not-word, .duplicate-word {
+    text-shadow: 2px 2px red;
+}
+
+.ok {
+    text-shadow: 2px 2px green;
+}
+
+
+
+

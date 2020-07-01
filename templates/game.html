@@ -1,3 +1,6 @@
+<!-- Jon Compton
+     Springboard May 26 Cohort -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +9,59 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Boggle!</title>
     <link rel="stylesheet" href="/static/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <table id="stats-table">
-        <tr id="stats-titles">
-            <th>SCORE</th>
-            <th>HIGH SCORE</th>
-            <th>GAMES PLAYED</th>
-        </tr>
-        <tr id="stats-data">
-            <tr>0</tr>
-            <tr>{{ high }}</tr>
-            <tr>{{ plays }}</tr>
-        </tr>
-    </table>
+    <div id="game-container">
+        <table id="stats-table">
+            <tr id="stats-titles">
+                <th>SCORE</th>
+                <th>HIGH SCORE</th>
+                <th>GAMES PLAYED</th>
+            </tr>
+            <tr id="stats-data">
+                <td id="score-label">0</td>
+                <td id="high-score">{{ high }}</td>
+                <td>{{ plays }}</td>
+            </tr>
+            </table>
+            <h1 id="timer"></h1>
+            <div id="message-box">
+                <h3 id="message"></h3>
+            </div>
+            <div id="playfield">
+                <div id="board-side">
+                    <table id="game-board">
+                        {% for row in board %}
+                        <tr>
+                        {% for letter in row %}
+                        <td>{{letter}}</td>
+                        {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    <form action="/check">
+                        <input type="text" id="word-input" placeholder="Enter Word">
+                        <button id="submit">Submit</button>
+                    </form>
+                </div>
+                <div id="word-side">
+                    <div id="found-container">
+                        <h2 id="found-title">Words Found</h2>
+                        <p id="words"></p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+    </div>
     
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>    
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="static/app.js"></script>
 </body>
 </html>
